@@ -1,0 +1,121 @@
+a {
+  text-decoration: none;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.search {
+  border-radius: 50px;
+  border: 1px solid #000;
+  margin: 50px 0;
+  padding: 5px 5px 5px 10px;
+}
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.todo-list__item {
+  position: relative;
+  border: 1px solid #000;
+  padding: 5px 25px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.todo-list__item:hover .todo-list__overlay {
+  transform: translateY(0);
+}
+
+.todo-list__text {
+  display: block;
+  cursor: default;
+}
+.todo-list__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 500ms ease;
+  transform: translateY(200%);
+  background-color: #ececec;
+  width: 100%;
+  height: 100%;
+}
+.add-card {
+  padding: 5px 15px;
+  font-size: 30px;
+  background-color: green;
+  border-radius: 50%;
+  color: #fff;
+}
+.settings-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.backdrop-add {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0, 5);
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
+.backdrop-add.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.add-modal {
+  position: relative;
+  min-width: 100px;
+  min-height: 100px;
+  background-color: #c2bdbd;
+  padding: 40px;
+  border-radius: 10px;
+}
+.add-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.add-modal__input {
+  outline: none;
+  border: none;
+  padding: 10px 10px 10px 15px;
+
+  border-radius: 50px;
+}
+.final-add {
+  background-color: green;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+.found {
+  background-color: yellow;
+  font-weight: bold;
+}
